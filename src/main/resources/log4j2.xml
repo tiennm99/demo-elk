@@ -29,7 +29,7 @@
       <DefaultRolloverStrategy max="10"/>
     </RollingFile>
 
-    <Socket name="LogstashAppender" host="logstash-host" port="4560" protocol="TCP">
+    <Socket name="LogstashAppender" host="localhost" port="5000" protocol="TCP">
       <JsonTemplateLayout eventTemplateUri="classpath:LogstashJsonEventLayoutV1.json">
         <EventTemplateAdditionalField key="app_name" value="${APP_NAME}"/>
         <EventTemplateAdditionalField key="environment" value="${sys:env:-development}"/>
